@@ -85,7 +85,7 @@ export const siteData: SiteConfig = {
     heading: 'Updated profiles',
     linkedIn: {
       title: 'LinkedIn Profile',
-      buttonText: 'View LinkedIn',
+      buttonText: 'LinkedIn Profile',
       url: 'https://www.linkedin.com/in/pprateek26',
     },
     cv: {
