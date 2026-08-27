@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, ExternalLink, FileText } from 'lucide-react';
+import { X, ExternalLink, FileText, Download } from 'lucide-react';
 import { siteData } from '../config/siteData';
 
 interface CVViewerModalProps {
@@ -78,8 +78,17 @@ export const CVViewerModal: React.FC<CVViewerModalProps> = ({ isOpen, onClose })
               <span>Open PDF</span>
             </a>
 
-            <button
+            <a
+              href={linksSection.cv.pdfPath}
+              download="Prateek_Parihar_CV_Generic_1.pdf"
+              className="btn btn-secondary"
+              style={{ padding: '6px 12px', fontSize: '0.8rem' }}
+            >
+              <Download size={14} />
+              <span>Download PDF</span>
+            </a>
 
+            <button
               onClick={onClose}
               style={{
                 background: 'none',

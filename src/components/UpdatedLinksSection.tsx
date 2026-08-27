@@ -1,7 +1,6 @@
 import React from 'react';
-import { Linkedin, FileText, ArrowUpRight } from 'lucide-react';
+import { Linkedin, FileText, ArrowUpRight, Download } from 'lucide-react';
 import { siteData } from '../config/siteData';
-
 
 interface UpdatedLinksSectionProps {
   onOpenCvModal: () => void;
@@ -66,15 +65,25 @@ export const UpdatedLinksSection: React.FC<UpdatedLinksSectionProps> = ({ onOpen
               </h3>
             </div>
 
-            <button onClick={onOpenCvModal} className="btn btn-primary" style={{ width: '100%' }}>
-              <FileText size={14} />
-              <span>View CV</span>
-            </button>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+              <button onClick={onOpenCvModal} className="btn btn-primary" style={{ padding: '8px 10px', fontSize: '0.82rem' }}>
+                <FileText size={14} />
+                <span>View CV</span>
+              </button>
 
+              <a
+                href={linksSection.cv.pdfPath}
+                download="Prateek_Parihar_CV_Generic_1.pdf"
+                className="btn btn-secondary"
+                style={{ padding: '8px 10px', fontSize: '0.82rem' }}
+              >
+                <Download size={14} />
+                <span>Download CV</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 };
-
