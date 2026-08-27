@@ -42,7 +42,7 @@ export const siteData: SiteConfig = {
   candidate: {
     name: 'Prateek Parihar',
     linkedInUrl: 'https://www.linkedin.com/in/pprateek26',
-    cvPdfPath: '/assets/prateek_cv.pdf',
+    cvPdfPath: './assets/prateek_cv.pdf',
   },
 
   intro: {
@@ -89,7 +89,7 @@ export const siteData: SiteConfig = {
     cv: {
       title: 'Updated Generic CV',
       buttonText: 'Download CV',
-      pdfPath: '/assets/prateek_cv.pdf',
+      pdfPath: './assets/prateek_cv.pdf',
     },
   },
 
