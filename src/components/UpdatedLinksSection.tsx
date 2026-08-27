@@ -2,11 +2,7 @@ import React from 'react';
 import { Linkedin, FileText, ArrowUpRight, Download } from 'lucide-react';
 import { siteData } from '../config/siteData';
 
-interface UpdatedLinksSectionProps {
-  onOpenCvModal: () => void;
-}
-
-export const UpdatedLinksSection: React.FC<UpdatedLinksSectionProps> = ({ onOpenCvModal }) => {
+export const UpdatedLinksSection: React.FC = () => {
   const { linksSection } = siteData;
 
   return (
@@ -53,7 +49,7 @@ export const UpdatedLinksSection: React.FC<UpdatedLinksSectionProps> = ({ onOpen
             </a>
           </div>
 
-          {/* CV Card */}
+          {/* CV Card - Direct Download Only */}
           <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '14px' }}>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#38bdf8', marginBottom: '4px' }}>
@@ -65,22 +61,15 @@ export const UpdatedLinksSection: React.FC<UpdatedLinksSectionProps> = ({ onOpen
               </h3>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
-              <button onClick={onOpenCvModal} className="btn btn-primary" style={{ padding: '8px 10px', fontSize: '0.82rem' }}>
-                <FileText size={14} />
-                <span>View CV</span>
-              </button>
-
-              <a
-                href={linksSection.cv.pdfPath}
-                download="Prateek_Parihar_CV_Generic_1.pdf"
-                className="btn btn-secondary"
-                style={{ padding: '8px 10px', fontSize: '0.82rem' }}
-              >
-                <Download size={14} />
-                <span>Download CV</span>
-              </a>
-            </div>
+            <a
+              href={linksSection.cv.pdfPath}
+              download="Prateek_Parihar_CV_Generic_1.pdf"
+              className="btn btn-primary"
+              style={{ width: '100%' }}
+            >
+              <Download size={16} />
+              <span>Download CV</span>
+            </a>
           </div>
         </div>
       </div>
