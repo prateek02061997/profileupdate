@@ -1,3 +1,5 @@
+import cvPdfUrl from '../assets/Prateek_Parihar_CV_Generic_1.pdf';
+
 export interface ChangeItem {
   area: string;
   description: string;
@@ -42,7 +44,7 @@ export const siteData: SiteConfig = {
   candidate: {
     name: 'Prateek Parihar',
     linkedInUrl: 'https://www.linkedin.com/in/pprateek26',
-    cvPdfPath: './assets/prateek_cv.pdf',
+    cvPdfPath: cvPdfUrl,
   },
 
   intro: {
@@ -89,7 +91,7 @@ export const siteData: SiteConfig = {
     cv: {
       title: 'Updated Generic CV',
       buttonText: 'Download CV',
-      pdfPath: './assets/prateek_cv.pdf',
+      pdfPath: cvPdfUrl,
     },
   },
 
